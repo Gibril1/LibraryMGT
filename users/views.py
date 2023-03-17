@@ -5,14 +5,7 @@ from rest_framework.generics import RetrieveUpdateAPIView, CreateAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import StudentProfile, LibrarianProfile, User
-from app.permissions import StudentPermission, LibrarianPermission
-
-
-class UserEditDeletePermission(BasePermission):
-    def has_object_permission(self, request, view, obj):
-        if request.method in SAFE_METHODS:
-            return True
-        return obj.user == request.user
+from app.permissions import StudentPermission, LibrarianPermission, UserEditDeletePermission
 
 
 class RegistrationView(CreateAPIView):

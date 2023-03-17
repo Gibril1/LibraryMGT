@@ -2,8 +2,8 @@ POST http://127.0.0.1:8000/api/auth/register/user/
 Content-Type: application/json
 
 {
-    "email":"gibril@gmail.com",
+    "email":"library@gmail.com",
     "password":"gibril@123",
     "password2":"gibril@123",
-    "role":"Student"
+    "role":"Librarian"
 }

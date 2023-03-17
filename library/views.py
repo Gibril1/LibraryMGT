@@ -1,20 +1,27 @@
 from django.http import Http404
 from rest_framework import status
 from rest_framework.generics import ListAPIView, RetrieveAPIView, UpdateAPIView
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, BasePermission, SAFE_METHODS
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import LibrarySerializer
 from .models import Library
 from users.models import LibrarianProfile
-from app.permissions import LibrarianPermission, UserEditDeletePermission
+from app.permissions import LibrarianPermission
+
+class UserEditDeletePermission(BasePermission):
+    def has_object_permission(self, request, view, obj):
+        if request.method in SAFE_METHODS:
+            return True
+        return obj.librarian.user == request.user
+
 
 # Create your views here.
 class LibraryCreateView(APIView):
     permission_classes = [IsAuthenticated, LibrarianPermission]
     def get_librarian(self, user):
         try:
-            return LibrarianProfile.objects.filter(user=user)
+            return LibrarianProfile.objects.get(user=user)
         except:
             raise Http404
     

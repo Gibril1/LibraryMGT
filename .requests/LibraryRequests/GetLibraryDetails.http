@@ -1,0 +1,4 @@
+@id = 1
+GET http://127.0.0.1:8000/api/library/get/{{ id }}/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MDgzMjc2LCJpYXQiOjE2NzkwNzQyNzYsImp0aSI6IjY5Mjg5NGRlMjEzNTQzY2I5MjFmMDAwZWZhNjM5MTYzIiwidXNlcl9pZCI6M30.eujpM8gI--WTXyMcw83GUagFgai8iLKp7kn682un-CA

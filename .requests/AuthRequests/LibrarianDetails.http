@@ -1,0 +1,9 @@
+POST http://127.0.0.1:8000/api/auth/register/librarian/c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MDgxMDQ5LCJpYXQiOjE2NzkwNzIwNDksImp0aSI6ImE3OTc0N2E4ZjA3ZDQyM2JhOGFlYjI5ZjUxN2MzMDRhIiwidXNlcl9pZCI6M30.a5lWA_IJHWszOmlZbvKVsHnKV5M-8ruNvZfeCQBo1PQ
+
+{
+    "first_name":"Librarian",
+    "last_name":"Librarian",
+    "other_names":"Librarian"
+}

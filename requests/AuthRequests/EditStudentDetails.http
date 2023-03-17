@@ -1,0 +1,10 @@
+@id = 2
+PUT http://127.0.0.1:8000/api/auth/student/{{ id }}/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MDc2NzQ4LCJpYXQiOjE2NzkwNjc3NDgsImp0aSI6IjJlNTkxNmE2MGE2YTQzYzk4NTg4ZTg3MzVhYzBlNDU3IiwidXNlcl9pZCI6MX0.gn0df6wmfYz_SNvPMj_0ItIMQuqvWpNwSLpjx9HJ_n0
+
+{
+    "first_name":"Gibril44",
+    "last_name":"Gibril44",
+    "other_names":"Gibril4"
+}
